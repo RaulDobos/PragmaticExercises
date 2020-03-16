@@ -23,5 +23,4 @@ public class RetirementCalculator {
         System.out.println("It's " + currentYear + " so you can retire in " +
                         (currentYear + (retirementAge - currentAge)) + ".");
     }
-
 }
