@@ -23,16 +23,16 @@ public class SayingHello {
         String name = scanner.nextLine();
 
         if(name.equals("Raul")){
-            System.out.println("Hello, Raul, nice to meet you!");
+            System.out.println("Hello, " + name + ", nice to meet you!");
         }
         else if(name.equals("Ovidiu")){
-            System.out.println("What's up, Ovidiu!");
+            System.out.println("What's up, " + name + "?");
         }
         else if(name.equals("Eduard")){
-            System.out.println("Spor la corectat teme, Eduard!");
+            System.out.println("Spor la corectat teme, " + name + "!");
         }
         else{
-            System.out.println("Hello!");
+            System.out.println("Hello, " + name + ".");
         }
     }
 }
