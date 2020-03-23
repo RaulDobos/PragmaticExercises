@@ -19,9 +19,9 @@ public class PaintCalculator {
 
         int areaOfCeiling = (int) Math.floor(length * width);
 
-        final int squareFeetPerGallon = 350;
+        final int SQUARE_FEET_PER_GALLON = 350;
 
-        int numberOfGallonsNeeded = areaOfCeiling / squareFeetPerGallon + 1;
+        int numberOfGallonsNeeded = areaOfCeiling / SQUARE_FEET_PER_GALLON + 1;
 
         System.out.println("You will need to purchase " + numberOfGallonsNeeded + " gallons of paint to cover " +
                             areaOfCeiling + " square feet.");
