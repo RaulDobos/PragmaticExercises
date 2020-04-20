@@ -14,21 +14,21 @@ public class TemperatureConverter {
 
         String choice = scanner.nextLine();
 
-        while( !((choice.equals("C") || choice.equals("c")) || (choice.equals("F") || choice.equals("f"))) ){
+        while( !(choice.equalsIgnoreCase("C") || choice.equalsIgnoreCase("F")) ){
             System.out.println("You can only enter C or F. Please try again: ");
             choice = scanner.nextLine();
         }
 
-        if(choice.equals("C") || choice.equals("c")){
+        if(choice.equalsIgnoreCase("C")){
             System.out.println("Please enter the temperature in Fahrenheit: ");
             fahrenheitTemperature = scanner.nextDouble();
-            celsiusTemperature = (fahrenheitTemperature - 32) * (5 / 9);
+            celsiusTemperature = (fahrenheitTemperature - 32) * 5 / 9;
             System.out.println("The temperature in Celsius is: " + celsiusTemperature + ".");
         }
-        else if(choice.equals("F") || (choice.equals("f"))){
+        else if(choice.equalsIgnoreCase("F")){
             System.out.println("Please enter the temperature in Celsius: ");
             celsiusTemperature = scanner.nextDouble();
-            fahrenheitTemperature = (celsiusTemperature * 9/5) + 32;
+            fahrenheitTemperature = (celsiusTemperature * 9 / 5) + 32;
             System.out.println("The temperature in Fahrenheit is: " + fahrenheitTemperature + ".");
         }
     }

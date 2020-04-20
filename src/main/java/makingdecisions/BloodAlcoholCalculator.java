@@ -14,7 +14,7 @@ public class BloodAlcoholCalculator {
         System.out.println("Enter your gender(m/f): ");
         String gender = scanner.nextLine();
 
-        while( !((gender.equals("M") || gender.equals("m")) || (gender.equals("F") || gender.equals("f"))) ){
+        while( !(gender.equalsIgnoreCase("M") || gender.equalsIgnoreCase("F"))){
             System.out.println("You can only enter m or f. Try again:");
             gender = scanner.nextLine();
         }
@@ -33,7 +33,7 @@ public class BloodAlcoholCalculator {
 
         double totalAlcoholConsumed = numberOfDrinks * amountOfAlcoholPerDrink;
 
-        if(gender.equals("M") || gender.equals("m")){
+        if(gender.equalsIgnoreCase("M")){
             final double alcoholDistributionRatio = 0.73;
 
             BAC = (totalAlcoholConsumed * 5.14 / weight * alcoholDistributionRatio) -
@@ -41,7 +41,8 @@ public class BloodAlcoholCalculator {
 
             if(BAC < 0) BAC = 0;
 
-        }else if(gender.equals("F") || gender.equals("f")){
+        }
+        else{
             final double alcoholDistributionRatio = 0.66;
 
             BAC = (totalAlcoholConsumed * 5.14 / weight * alcoholDistributionRatio) -
