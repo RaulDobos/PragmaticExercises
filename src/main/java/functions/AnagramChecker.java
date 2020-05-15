@@ -1,9 +1,19 @@
 package functions;
 
+import java.util.Scanner;
+
 public class AnagramChecker {
     public static void main(String[] args) {
-        String s1 = new String("book");
-        String s2 = new String("note");
+        String s1, s2;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter two strings and I'll tell you if they are anagrams:");
+
+        System.out.println("Enter the first string: ");
+        s1 = scanner.nextLine();
+        System.out.println("Enter the second string: ");
+        s2 = scanner.nextLine();
 
         if(isAnagram(s1, s2)){
             System.out.println("\"" + s1 + "\" and \"" + s2 + "\" are anagrams.");
